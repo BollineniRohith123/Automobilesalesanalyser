@@ -265,10 +265,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "InventoryAging Component HTML Structure Fix"
     - "Clear All Data Functionality"
-  stuck_tasks:
-    - "InventoryAging Component - Detailed Table Rendering"
+  stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
