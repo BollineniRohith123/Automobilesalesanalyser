@@ -196,9 +196,9 @@ frontend:
 
   - task: "InventoryAging Component"
     implemented: true
-    working: false
+    working: true
     file: "frontend/src/components/InventoryAging.jsx"
-    stuck_count: 1
+    stuck_count: 0
     priority: "critical"
     needs_retesting: false
     status_history:
@@ -208,6 +208,9 @@ frontend:
         - working: false
           agent: "testing"
           comment: "❌ CRITICAL HTML STRUCTURE ERRORS: Multiple hydration errors in detailed inventory table. HTML elements incorrectly nested (<div> inside <table>, <th>, <tbody>, etc.). KPI cards and chart work correctly (421 unsold, 104 >60 days, 60 >90 days), but detailed table fails to render due to invalid HTML structure. 'View Detailed Stock List' button toggles state but table doesn't appear."
+        - working: true
+          agent: "testing"
+          comment: "✅ FIXED & WORKING: Detailed inventory table now renders correctly with proper HTML structure. No HTML nesting errors detected (0 divs in TH/TD elements). Table displays 1000 rows of inventory data with valid thead/tbody structure. Search functionality working (filtered 528 'Tiago' results). KPI cards show correct values. Chart renders properly. All core functionality operational."
 
   - task: "Dashboard Component Refactor"
     implemented: true
